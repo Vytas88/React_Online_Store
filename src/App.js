@@ -10,18 +10,20 @@ import Details from "./components/Details";
 import Cart from "./components/Cart";
 import PageNotFound from "./components/PageNotFound";
 
-function App() {
-  return (
-    <React.Fragment>
-      <Navbar />
-      <Switch>
-        <Route exact path="/" component={Products} />
-        <Route path="/details" component={Details} />
-        <Route path="/cart" component={Cart} />
-        <Route component={PageNotFound} />
-      </Switch>
-    </React.Fragment>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Products} />
+          <Route path="/details" component={Details} />
+          <Route path="/cart" component={Cart} />
+          <Route component={PageNotFound} />
+        </Switch>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
