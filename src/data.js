@@ -96,3 +96,16 @@ export const storeProducts = [
     total: 0
   }
 ];
+
+export const detailProduct = {
+  id: 8,
+  title: "Bose Speaker",
+  img: "img/bose.jpg",
+  price: 49,
+  company: "Bose",
+  info:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+  inCart: false,
+  count: 0,
+  total: 0
+};
