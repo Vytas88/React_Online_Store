@@ -103,6 +103,7 @@ const ProductWrapper = styled.div`
     font-size: 1.4rem;
     border-radius: 0.5 0 0 0;
     transform: translate(100%, 100%);
+    transition: all 0.2s ease-in-out;
   }
   .img-container:hover .cart-btn {
     transform: translate(0, 0);
