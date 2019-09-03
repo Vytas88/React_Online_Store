@@ -24,8 +24,8 @@ export default class SingleProduct extends Component {
                   className="cart-btn"
                   disabled={inCart ? true : false}
                   onClick={() => {
-                    value.addToCart(id);
-                    value.openModal(id);
+                    value.addToCart(String(id));
+                    value.openModal(String(id));
                   }}
                 >
                   {inCart ? (
