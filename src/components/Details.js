@@ -6,19 +6,15 @@ import { storeProducts, detailProduct } from "../data";
 
 export default class Details extends Component {
   render() {
+    const { id } = this.props.match.params;
     return (
       <ProductConsumer>
         {value => {
-          console.log(value.detailProduct);
-          const {
-            id,
-            company,
-            img,
-            info,
-            price,
-            title,
-            inCart
-          } = value.detailProduct;
+          console.log(id, "detailProduct");
+          const { company, info, img, price, title, inCart } = value.getItem(
+            String(id)
+          );
+          // const images = require.context("../../public/img", true);
           return (
             <div className="container py-5">
               <div className="row">

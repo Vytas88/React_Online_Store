@@ -37,8 +37,9 @@ export default function CartItem({ item, value }) {
       {}
       <div className="col-10 mx-auto col-lg-2">
         <div className="cart-icon" onClick={() => removeItem(id)}>
-          {/* <img src={delete} alt="delete-button" /> */}
-          <ButtonContainer>delete</ButtonContainer>
+          <span role="img" aria-label="wastebasket">
+            🗑️
+          </span>
         </div>
       </div>
       <div className="col-10 mx-auto col-lg-2">

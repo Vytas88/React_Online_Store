@@ -2,7 +2,7 @@ export const storeProducts = [
   {
     id: 1,
     title: "Apple iPad",
-    img: "img/apple-ipad.jpg",
+    img: "/img/apple-ipad.jpg",
     price: 369,
     company: "Apple",
     info:
@@ -14,7 +14,7 @@ export const storeProducts = [
   {
     id: 2,
     title: "Apple iPhone",
-    img: "img/apple-iphone.jpg",
+    img: "/img/apple-iphone.jpg",
     price: 349,
     company: "Apple",
     info:
@@ -26,7 +26,7 @@ export const storeProducts = [
   {
     id: 3,
     title: "Canon DSLR",
-    img: "img/canon.jpg",
+    img: "/img/canon.jpg",
     price: 25,
     company: "Canon",
     info:
@@ -38,7 +38,7 @@ export const storeProducts = [
   {
     id: 4,
     title: "Apple Watch",
-    img: "img/apple-watch.jpg",
+    img: "/img/apple-watch.jpg",
     price: 330,
     company: "Apple",
     info:
@@ -50,7 +50,7 @@ export const storeProducts = [
   {
     id: 5,
     title: "Sony Headphone",
-    img: "img/sony-headphones.jpg",
+    img: "/img/sony-headphones.jpg",
     price: 39,
     company: "Sony",
     info:
@@ -62,7 +62,7 @@ export const storeProducts = [
   {
     id: 6,
     title: "Macbook Air",
-    img: "img/macbook-air.jpg",
+    img: "/img/macbook-air.jpg",
     price: 649,
     company: "Macbook",
     info:
@@ -74,7 +74,7 @@ export const storeProducts = [
   {
     id: 7,
     title: "Sony Play Station",
-    img: "img/sony-playstation.jpg",
+    img: "/img/sony-playstation.jpg",
     price: 269,
     company: "Sony",
     info:
@@ -86,7 +86,7 @@ export const storeProducts = [
   {
     id: 8,
     title: "Bose Speaker",
-    img: "img/bose.jpg",
+    img: "/img/bose.jpg",
     price: 49,
     company: "Bose",
     info:
@@ -100,7 +100,7 @@ export const storeProducts = [
 export const detailProduct = {
   id: 8,
   title: "Bose Speaker",
-  img: "img/bose.jpg",
+  img: "/img/bose.jpg",
   price: 49,
   company: "Bose",
   info:

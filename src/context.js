@@ -7,8 +7,8 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
   //So with products:[... storeProducts] we would get just values out, not all array, but anyway we need setProducts
   state = {
-    products: [],
-    detailProduct: detailProduct,
+    products: storeProducts.map(value => ({ ...value })),
+    detailProduct: {},
     cart: [],
     modalOpen: false,
     modalProduct: detailProduct,
@@ -16,43 +16,44 @@ class ProductProvider extends Component {
     cartTax: 0,
     cartTotal: 0
   };
-  componentDidMount() {
-    this.setProducts();
-  }
+  // componentDidMount() {
+  //   this.setProducts();
+  // }
 
-  setProducts = () => {
-    let tempProducts = [];
-    storeProducts.forEach(item => {
-      const singleItem = { ...item };
-      tempProducts = [...tempProducts, singleItem];
-    });
-    this.setState(
-      () => {
-        return {
-          products: tempProducts,
-          cart: [...this.state.cart]
-        };
-      },
-      () => {}
-    );
-  };
+  // setProducts = () => {
+  //   let tempProducts = [];
+  //   storeProducts.forEach(item => {
+  //     const singleItem = { ...item };
+  //     tempProducts = [...tempProducts, singleItem];
+  //   });
+  //   this.setState(
+  //     () => {
+  //       return {
+  //         products: tempProducts,
+  //         cart: [...this.state.cart]
+  //       };
+  //     },
+  //     () => {}
+  //   );
+  // };
 
   getItem = id => {
-    const product = this.state.products.find(item => item.id === id);
+    const product = this.state.products.find(item => String(item.id) === id);
     return product;
   };
 
   handleDetail = id => {
-    const product = this.getItem();
+    const product = this.getItem(id);
     this.setState(() => {
       return { detailProduct: product };
     });
     console.log("hello from detail");
   };
   addToCart = id => {
-    // console.log(`hello from addToCart. id is ${id}`);
+    console.log(`hello from addToCart. id is ${id}`);
     let tempProducts = [...this.state.products];
-    const index = tempProducts.indexOf(this.getItem(id));
+    const index = tempProducts.findIndex(product => String(product.id) === id);
+    console.log(`hello from addToCart. id is ${index}`, tempProducts);
     const product = tempProducts[index];
     product.inCart = true;
     product.count = 1;
@@ -185,7 +186,8 @@ class ProductProvider extends Component {
           increment: this.increment,
           decrement: this.decrement,
           removeItem: this.removeItem,
-          clearCart: this.clearCart
+          clearCart: this.clearCart,
+          getItem: this.getItem
         }}
       >
         {" "}
